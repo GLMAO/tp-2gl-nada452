@@ -3,6 +3,7 @@ package com.polytech.tp;
 public class CoursEnLigne extends CoursDecorator {
     CoursEnLigne(ICours cours) {
         //TODO: Implémenter le reste ...
+        super(cours);
     }
 
     @Override
