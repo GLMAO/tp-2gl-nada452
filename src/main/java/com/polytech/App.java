@@ -39,6 +39,21 @@ public class App
         System.out.println("\n--- Test changement général ---");
         gestionnaire.setChangement("Cours annulé pour cause d'une alerte");
 
+        System.out.println("exercice 3");
+        CoursEnLigne coursEnLigne = new CoursEnLigne(cours);
+        System.out.println("Cours en ligne : " + coursEnLigne.getDescription());
+        CoursEnAnglais coursEnAnglais = new CoursEnAnglais(cours);
+        System.out.println("Cours en anglais : " + coursEnAnglais.getDescription());
+        Magistral coursMagistral = new Magistral(cours);
+        System.out.println("\n2. Cours magistral : " + coursMagistral.getDescription());
+        CoursEnLigne coursEnLigneEtAnglais = new CoursEnLigne(new CoursEnAnglais(cours));
+        System.out.println("Cours combiné : " + coursEnLigneEtAnglais.getDescription());
+
+        gestionnaire.attach(new Etudiant("nada"));
+        gestionnaire.ajouterCours(coursEnLigne);
+        gestionnaire.ajouterCours(coursEnLigneEtAnglais);
+
+
 
     }
 
