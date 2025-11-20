@@ -3,7 +3,7 @@ package com.polytech.tp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GestionnaireEmploiDuTemps  implements Observer{
+public class GestionnaireEmploiDuTemps  implements Subject{
     private List<ICours> listeCours = new ArrayList<>();
     private List<Observer> observers = new ArrayList<>();
 
@@ -39,8 +39,4 @@ public class GestionnaireEmploiDuTemps  implements Observer{
         }
     }
 
-    @Override
-    public void update(String message) {
-
-    }
 }
